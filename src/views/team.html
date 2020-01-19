@@ -1,0 +1,46 @@
+<div class="section-content team-content">
+    <div style="position:relative">
+        <carousel 
+            paginationActiveColor="#ff0000d1" 
+            :perPageCustom="[[150, 1], [768, 2], [1100, 3]]"
+            :navigationEnabled="true"
+            navigationNextLabel="<div class='custom-nav'><a class='btn team-next'><i class='pe-7s-back'></i></a></div>"
+            navigationPrevLabel="<div class='custom-nav'><a class='btn team-prev'><i class='pe-7s-back'></i></a></div>">
+            <slide v-for="member in members">
+                <div class="team__card-cover">
+                    <div class="team-photo text-center">
+                        <img :src="member.photo" alt="team photo">
+                    </div>
+                    <div class="team__card">
+                        <div class="team-name pt-4">
+                            <h5>{{member.name}}</h5>
+                        </div>
+                        <div class="team-position pt-2">
+                            <h5>{{member.position_data}}</h5>
+                        </div>
+                        <div class="team-content mt-4">
+                            <h6><a href="mailto:member.mail">{{member.mail}}</a></h6>
+                            <ul class="mt-5 team-contact">
+                                <li>
+                                    <a href="#" class="team-icons">
+                                        <i class="fa fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="team-icons">
+                                        <i class="fa fa-whatsapp"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="team-icons">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
+            </slide>
+        </carousel>
+    </div>
+</div>

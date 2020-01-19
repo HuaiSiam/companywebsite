@@ -1,0 +1,1 @@
+<template src="../views/navbar.html"></template>
